@@ -85,7 +85,6 @@
             this.stanKontaLabel.Size = new System.Drawing.Size(187, 38);
             this.stanKontaLabel.TabIndex = 2;
             this.stanKontaLabel.Text = "Stan Konta:";
-            this.stanKontaLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // mojeKontoButton
             // 
@@ -107,7 +106,7 @@
             this.wplacButton.TabIndex = 7;
             this.wplacButton.Text = "Wpłać/Wypłać";
             this.wplacButton.UseVisualStyleBackColor = true;
-            this.wplacButton.Click += new System.EventHandler(this.button2_Click);
+            this.wplacButton.Click += new System.EventHandler(this.wplacButton_Click);
             // 
             // wykonajButton
             // 
@@ -149,7 +148,6 @@
             this.history.TabIndex = 11;
             this.history.TabStop = false;
             this.history.Text = "History";
-            this.history.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // history_panel
             // 
@@ -214,7 +212,6 @@
             this.wyplacTextBox.Size = new System.Drawing.Size(398, 38);
             this.wyplacTextBox.TabIndex = 3;
             this.wyplacTextBox.Text = "WPISZ KWOTE";
-            this.wyplacTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // wplacTextBox
             // 
@@ -295,7 +292,6 @@
             this.numerKontaLabel.Size = new System.Drawing.Size(109, 20);
             this.numerKontaLabel.TabIndex = 14;
             this.numerKontaLabel.Text = "Numer konta:";
-            this.numerKontaLabel.Click += new System.EventHandler(this.numerKontaLabel_Click);
             // 
             // numerKonta
             // 

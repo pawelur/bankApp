@@ -65,30 +65,12 @@ namespace bankApp
                 renderedHistoryItems.Add(historyItem);
             }
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            changeScene(wplacView);
-        }
-
         private void changeScene(Panel newScene)
         {
             this.scene.Visible = false;
             newScene.Visible = true;
             this.scene = newScene;
-
         }
-
 
         private void mojeKontoButton_Click(object sender, EventArgs e)
         {
@@ -97,19 +79,20 @@ namespace bankApp
             renderStanKonta();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void wplacButton_Click(object sender, EventArgs e)
         {
-
+            changeScene(wplacView);
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void wykonajButton_Click(object sender, EventArgs e)
         {
-
+            changeScene(wykonajView);
         }
 
         private void wplacActionButton_Click(object sender, EventArgs e)
         {
-            if( int.TryParse(wplacTextBox.Text, out int amount) ){
+            if (int.TryParse(wplacTextBox.Text, out int amount))
+            {
                 loggedAccount.topUpAmount(amount);
             }
         }
@@ -129,24 +112,6 @@ namespace bankApp
             {
                 loggedAccount.sendMoney(Guid.Parse(NumerKontaTextBox.Text), amount);
             }
-
-        }
-
-        private void wykonajButton_Click(object sender, EventArgs e)
-        {
-            changeScene(wykonajView);
-        }
-
-        private void numerKonta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numerKontaLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
-
-
 }

@@ -15,24 +15,25 @@ namespace bankApp
         public HistoryItem(DateTime date, string operationName, int amount)
         {
             this.date = date;
-            this.operationName = operationName; 
+            this.operationName = operationName;
             this.amount = amount;
         }
 
         public DateTime Date
         {
-            get => date; 
-            set => date = value; 
+            get => date;
+            set => date = value;
         }
 
-        public string OperationName { 
+        public string OperationName
+        {
             get => operationName;
-            set => operationName = value; 
-        }  
+            set => operationName = value;
+        }
 
         public int Amount
         {
-            get => amount; 
+            get => amount;
         }
     }
 }

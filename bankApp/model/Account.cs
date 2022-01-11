@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace bankApp
 {
 
-    public class Account 
+    public class Account
     {
         public static int id = 0;
         public static List<Account> bankAccounts = new List<Account>();
@@ -24,7 +24,7 @@ namespace bankApp
         private Guid publicKey;
 
         private List<HistoryItem> history;
-        
+
         public Account(string name, string surname, string address, DateTime dateOfBirth)
         {
             this.name = name;
@@ -51,7 +51,7 @@ namespace bankApp
             this.history.Add(historyItem);
         }
 
-        public string Name 
+        public string Name
         {
             get => name;
             set => name = value;
@@ -104,14 +104,15 @@ namespace bankApp
             return String.Format("{0} {1}", name, surname);
         }
 
-        public void topUpAmount(int amount, bool saveHistory=true)
+        public void topUpAmount(int amount, bool saveHistory = true)
         {
             if (amount > 0 && amount < 1000)
             {
                 avaliableBalance += amount;
             }
 
-            if (saveHistory) {
+            if (saveHistory)
+            {
                 this.addHistory(DateTime.Now, "Wpłacono środki", amount);
             }
             //TODO: raise error when amout is invalid
@@ -124,7 +125,8 @@ namespace bankApp
             if (amount <= avaliableBalance)
             {
                 avaliableBalance -= amount;
-            } else
+            }
+            else
             {
                 takenBalance = avaliableBalance;
                 avaliableBalance = 0;
@@ -158,8 +160,5 @@ namespace bankApp
                 reciever.addHistory(DateTime.Now, "Odebrano środki", amount);
             }
         }
-
-
-
     }
 }
